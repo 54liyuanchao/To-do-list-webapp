@@ -1,45 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>To do list</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Compressed CSS -->
 
-  </head>
-  <body onload="fetchIssues()">
-    <div class="container">
-      <h1>To Do List</h1>
-      <div class="jumbotron">
-        <h3>Add New Task</h3>
-        <form id="issueInputForm">
-          <div class="form-group">
-            <label for="issueDescInput">Description</label>
-            <input type="text" class="form-control" id="issueDescInput" placeholder="Describe the issue...">
-          </div>
-          <div class="form-group">
-            <label for="issuePriorityInput">Priority</label>
-            <select id="issuePriorityInput" class="form-control">
-              <option value="low">Low</option>
-              <option value="medium">Medium</option>
-              <option value="high">High</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="issueDateInput">Date</label>
-            <input type="text" class="form-control" id="issueDateInput" placeholder="Enter Date...">
-          </div>
-          <button type="submit" class="btn btn-primary">Add</button>
-        </form>
-      </div>
-      <div class="col-lg-12">
-        <div id="Issuelist">
-        </div>
-      </div>
-    </div>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="main.js"></script>
-  </body>
+
+
+  <!-- Compressed JavaScript -->
+
+  <title>Document</title>
+  <script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/jquery.cycle2.min.js">
+
+  </script>
+  <style type="text/css">
+    *{padding: 0;margin: 0;}
+    body{font-family: sans-serif;}
+    img{max-width: 100%;}
+    .cycle-slideshow{
+      width: 100%;
+      display: block;
+      position: relative;
+      margin:0 auto;
+    }
+    .cycle-prev, .cycle-next{
+      font-size: 200%;
+      color:#fff;
+      display: block;
+      position: absolute;
+      top: 50%;
+      z-index: 999;
+      cursor: pointer;
+    }
+    .cycle-prev{
+      left: 10%;
+    }
+    .cycle-next{
+      right: 10%;
+    }
+    .cycle-pager{
+      width: 100%;
+      text-align: center;
+      display: block;
+      position: absolute;
+      bottom: 20px;
+      z-index: 999;
+      cursor: pointer;
+    }
+    .cycle-pager span{
+      text-indent: 100%;
+      white-space: nowrap;
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      margin: 0 10px;
+    }
+    .cycle-pager .cycle-pager-active{
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="cycle-slideshow">
+    <span class="cycle-prev">&#9001;</span>
+    <span class="cycle-next">&#9002;</span>
+    <span class="cycle-pager"></span>
+    <img src="img/first.jpg" alt="">
+    <img src="img/second.jpg" alt="">
+    <img src="img/third.jpg" alt="">
+  </div>
+
+</body>
 </html>
